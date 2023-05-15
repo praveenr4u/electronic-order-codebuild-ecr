@@ -1,10 +1,18 @@
-version: 0.2
+version: 0.3
 
 env:
   variables:
     AWS_DEFAULT_REGION: us-east-2
 
 phases:
+  install:
+    runtime-versions:
+      java: corretto11
+    commands:
+      - apt-get update
+      - apt-get install -y docker.io
+      - service docker start
+      -
   pre_build:
     commands:
       - mvn clean install
