@@ -4,13 +4,6 @@ env:
     AWS_DEFAULT_REGION: us-east-2
 
 phases:
-  install:
-    runtime-versions:
-      java: corretto11
-    commands:
-      - yum update -y
-      - yum install -y docker-ce
-      - service docker star
 
   pre_build:
     commands:
