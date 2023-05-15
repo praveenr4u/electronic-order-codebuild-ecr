@@ -11,7 +11,7 @@ phases:
       - apt-get update
       - apt-get install -y docker.io
       - service docker start
-      -
+
   pre_build:
     commands:
       - mvn clean install
