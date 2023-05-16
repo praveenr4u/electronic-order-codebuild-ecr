@@ -27,7 +27,7 @@ phases:
       - echo Build completed on `date`
       - echo Pushing the Docker images...
       - REPOSITORY_URI=885578568250.dkr.ecr.us-east-2.amazonaws.com/app_repo
-      - docker push $REPOSITORY_URI:latest
+      - docker push 885578568250.dkr.ecr.us-east-2.amazonaws.com/app_repo:latest
       - docker push $REPOSITORY_URI:$IMAGE_TAG
       - echo Writing image definitions file...
       - printf '[{"name":"order-service","imageUri":"%s"}]' $REPOSITORY_URI:$IMAGE_TAG > imagedefinitions.json
